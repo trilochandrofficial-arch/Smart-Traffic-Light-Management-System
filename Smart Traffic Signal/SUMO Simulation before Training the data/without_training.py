@@ -50,6 +50,6 @@ def compute_total_waiting_time_with_traci(sumo_cfg_file, steps=501):
     return total_waiting_time
 
 # Use the function
-sumo_cfg_file = r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Sjdt.sumocfg"
+sumo_cfg_file = r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\data\Training and Testing data\Sjdt.sumocfg"
 total_time = compute_total_waiting_time_with_traci(sumo_cfg_file)
 print(f"Total waiting time for the 500 simulation steps: {total_time} seconds")

@@ -230,7 +230,7 @@ def run(train=True,model_name="model",epochs=50,steps=500,ard=False):
     best_time = np.inf
     total_time_list = list()
     traci.start(
-        [checkBinary("sumo"), "-c", r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Sjdt.sumocfg", "--tripinfo-output", r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Simulation After Training\output files\tripinfo.xml"]
+        [checkBinary("sumo"), "-c", r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\data\Training and Testing data\Sjdt.sumocfg", "--tripinfo-output", r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\Output_data_files\tripinfo.xml"]
     )
     all_junctions = traci.trafficlight.getIDList()
     junction_numbers = list(range(len(all_junctions)))
@@ -265,11 +265,11 @@ def run(train=True,model_name="model",epochs=50,steps=500,ard=False):
     for e in range(epochs):
         if train:
             traci.start(
-                [checkBinary("sumo"), "-c", r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Sjdt.sumocfg", "--tripinfo-output", r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Simulation After Training\output files\tripinfo.xml"]
+                [checkBinary("sumo"), "-c", r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\data\Training and Testing data\Sjdt.sumocfg", "--tripinfo-output", r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\Output_data_files\tripinfo.xml"]
             )
         else:
             traci.start(
-                [checkBinary("sumo-gui"), "-c", r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Sjdt.sumocfg", "--tripinfo-output", r"C:\Users\kpanc\Desktop\Project 298\Smart Traffic Signal\Simulation After Training\output files\tripinfo.xml"]
+                [checkBinary("sumo-gui"), "-c", r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\data\Training and Testing data\Sjdt.sumocfg", "--tripinfo-output", r"c:\Users\trilo\OneDrive\Smart-Traffic-Light-Management-System\Smart Traffic Signal\Output_data_files\tripinfo.xml"]
             )
 
         print(f"epoch: {e}")
